@@ -87,18 +87,18 @@ export const Header: React.FC<HeaderProps> = ({
             ) : (
               <div
                 onClick={() => navigate('/dashboard')}
-                className="w-9 h-9 rounded-xl bg-gradient-to-tr from-amber-700 to-orange-500 flex items-center justify-center font-black text-white text-base shadow-xs cursor-pointer"
+                className="w-9 h-9 rounded-xl bg-amber-700 hover:bg-amber-600 flex items-center justify-center font-black text-white text-base shadow-xs cursor-pointer tracking-tight"
               >
-                क
+                K
               </div>
             )}
 
             <div>
               <h1 className="text-base font-extrabold tracking-tight text-white leading-tight">
-                {title || 'KalaKriti'}
+                {title || 'Karigan'}
               </h1>
               <p className="text-[11px] text-stone-400 font-medium leading-none">
-                Artisan Market Linkage • SIH26090
+                AI Artisan Business Assistant • SIH26090
               </p>
             </div>
           </div>

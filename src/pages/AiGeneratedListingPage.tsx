@@ -3,11 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import { Sparkles, Edit3, ArrowRight, Tag, ShieldCheck } from 'lucide-react';
 import { Header } from '../components/Header';
 import { Button } from '../components/Button';
+import { CraftStoryCard } from '../components/CraftStoryCard';
 import { useProductCreation } from '../context/ProductCreationContext';
 
 export const AiGeneratedListingPage: React.FC = () => {
   const navigate = useNavigate();
-  const { draftProduct } = useProductCreation();
+  const { draftProduct, updateDraftProduct } = useProductCreation();
 
   const displayImage =
     draftProduct.enhancedImageUrl ||
@@ -91,12 +92,23 @@ export const AiGeneratedListingPage: React.FC = () => {
             {/* Description */}
             <div className="pt-2 border-t border-stone-100">
               <span className="text-[11px] font-bold text-stone-400 uppercase tracking-wider block mb-1">
-                Artisan Story & Description
+                Product Description
               </span>
               <p className="text-sm text-stone-700 leading-relaxed">
                 {draftProduct.description ||
                   'Authentic handcrafted product made by rural artisan with sustainable materials.'}
               </p>
+            </div>
+
+            {/* Feature 6: Craft Story */}
+            <div className="pt-2 border-t border-stone-100">
+              <CraftStoryCard
+                craftStory={draftProduct.craftStory}
+                productName={draftProduct.productName}
+                material={draftProduct.material}
+                editable
+                onSave={(story) => updateDraftProduct({ craftStory: story })}
+              />
             </div>
 
             {/* Keywords */}
@@ -132,7 +144,7 @@ export const AiGeneratedListingPage: React.FC = () => {
             icon={<ArrowRight className="w-5 h-5" />}
             iconPosition="right"
           >
-            Continue to Pricing (आगे बढ़ें)
+            Continue to Pricing Recommendation
           </Button>
 
           <Button

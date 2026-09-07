@@ -237,8 +237,8 @@ export const VoiceRecorder: React.FC<VoiceRecorderProps> = ({
                 : 'border-stone-200 bg-white hover:bg-stone-50 text-stone-700'
             }`}
           >
-            <span className="font-bold block text-stone-900">Palm Basket (Hindi)</span>
-            <span className="text-[11px] text-stone-500">हाथ से बुनी ताड़ डलिया</span>
+            <span className="font-bold block text-stone-900">Palm Basket (Sample)</span>
+            <span className="text-[11px] text-stone-500">Handwoven with date palm fiber</span>
           </button>
 
           <button
@@ -250,8 +250,8 @@ export const VoiceRecorder: React.FC<VoiceRecorderProps> = ({
                 : 'border-stone-200 bg-white hover:bg-stone-50 text-stone-700'
             }`}
           >
-            <span className="font-bold block text-stone-900">Clay Pot (Natural)</span>
-            <span className="text-[11px] text-stone-500">नदी की लाल मिट्टी मटका</span>
+            <span className="font-bold block text-stone-900">Clay Pot (Sample)</span>
+            <span className="text-[11px] text-stone-500">Terracotta river clay craft</span>
           </button>
         </div>
       </div>

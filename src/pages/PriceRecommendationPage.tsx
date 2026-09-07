@@ -99,7 +99,7 @@ export const PriceRecommendationPage: React.FC = () => {
             isLoading={isSaving}
             icon={<Check className="w-6 h-6" />}
           >
-            Save to My Catalog (कैटलॉग में सहेजें)
+            Save to My Catalog
           </Button>
 
           <Button

@@ -60,7 +60,7 @@ export const ShareListingPage: React.FC = () => {
     'https://images.unsplash.com/photo-1590736969955-71cc94801759?auto=format&fit=crop&w=800&q=80';
   const price = product.suggestedPrice || product.priceMin || 0;
 
-  const shareText = `*ARTISAN PRODUCT LISTING*\n✨ *${product.productName}*\n💰 *Price: ₹${price.toLocaleString('en-IN')}*\n🌿 *Material:* ${product.material || 'Natural Handcrafted'}\n🏷️ *Category:* ${product.category}\n\n📖 *Story & Description:*\n${product.description}\n\n🤝 *Handmade • Eco-friendly • Direct from Rural Artisan*\nSupported by KalaKriti Market Linkage Initiative`;
+  const shareText = `*ARTISAN PRODUCT LISTING*\n✨ *${product.productName}*\n💰 *Price: ₹${price.toLocaleString('en-IN')}*\n🌿 *Material:* ${product.material || 'Natural Handcrafted'}\n🏷️ *Category:* ${product.category}\n\n📖 *Story & Description:*\n${product.description}\n\n🤝 *Handmade • Eco-friendly • Direct from Rural Artisan*\nSupported by Karigan AI Artisan Business Assistant`;
 
   const handleNativeShare = async () => {
     if (navigator.share) {
@@ -188,7 +188,7 @@ export const ShareListingPage: React.FC = () => {
             fullWidth
             icon={<Share2 className="w-6 h-6" />}
           >
-            Share to Buyers (शेयर करें)
+            Share to Buyers
           </Button>
 
           {/* WhatsApp Share */}

@@ -33,7 +33,7 @@ export const VoiceDescriptionPage: React.FC = () => {
             Tell us about your product in your language.
           </h2>
           <p className="text-stone-500 text-xs mt-1 leading-relaxed">
-            अपनी भाषा में बोलें • Tell us what material you used, how you made it, and what it is used for.
+            Tell us what material you used, how long it took to craft, and how it is used.
           </p>
         </div>
 

@@ -14,16 +14,16 @@ export const WelcomePage: React.FC = () => {
       {/* Top Banner / Artisan Heritage Accent */}
       <div className="pt-6 pb-2 text-center">
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-amber-700 text-white font-black text-2xl shadow-md mb-3 ring-4 ring-amber-100">
-          क
+          K
         </div>
         <div className="inline-block px-3 py-1 rounded-full bg-amber-100 text-amber-900 text-xs font-bold uppercase tracking-wider mb-2">
           SIH 2026 • Project SIH26090
         </div>
         <h1 className="text-3xl font-black text-stone-900 tracking-tight leading-tight">
-          KalaKriti
+          Karigan
         </h1>
         <p className="text-sm font-semibold text-amber-800 mt-0.5">
-          स्मार्ट कारीगर बाज़ार • Smart Artisan Catalog
+          AI Digital Business Assistant for Artisans
         </p>
       </div>
 
@@ -79,7 +79,7 @@ export const WelcomePage: React.FC = () => {
           icon={<ArrowRight className="w-6 h-6" />}
           iconPosition="right"
         >
-          Get Started / शुरू करें
+          Get Started
         </Button>
         <p className="text-center text-xs text-stone-400 font-medium">
           Zero cost • Built for rural & marginalized artisans

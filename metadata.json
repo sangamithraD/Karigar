@@ -1,6 +1,6 @@
 {
-  "name": "Artisan Catalog — Smart Market Linkage",
-  "description": "AI-Driven Market Linkage and Smart Cataloging Mobile Application for Marginalized Artisans (SIH26090)",
+  "name": "Karigan",
+  "description": "AI-Powered Digital Business Assistant for Artisans (SIH26090)",
   "requestFramePermissions": ["camera", "microphone"],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

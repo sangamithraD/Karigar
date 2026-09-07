@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { Share2, Edit3, Tag, Sparkles, ShieldCheck, ArrowLeft, Layers, IndianRupee } from 'lucide-react';
+import { Share2, Edit3, Tag, Sparkles, ShieldCheck, ArrowLeft, Layers, Globe } from 'lucide-react';
 import { Product } from '../types';
 import { fetchProductById } from '../api/productApi';
 import { Header } from '../components/Header';
 import { Button } from '../components/Button';
 import { PriceCard } from '../components/PriceCard';
+import { CraftStoryCard } from '../components/CraftStoryCard';
 import { EmptyState } from '../components/EmptyState';
 
 export const ProductDetailsPage: React.FC = () => {
@@ -133,6 +134,16 @@ export const ProductDetailsPage: React.FC = () => {
             </p>
           </div>
 
+          {/* Feature 6: Craft Story */}
+          <div className="pt-3 border-t border-stone-100">
+            <CraftStoryCard
+              craftStory={product.craftStory}
+              productName={product.productName}
+              material={product.material}
+              editable={false}
+            />
+          </div>
+
           {/* Keywords */}
           {product.keywords && product.keywords.length > 0 && (
             <div className="pt-3 border-t border-stone-100">
@@ -184,26 +195,37 @@ export const ProductDetailsPage: React.FC = () => {
           )}
         </div>
 
-        {/* Action Buttons: [Edit] and [Share Listing] */}
+        {/* Action Buttons: [Publish to Marketplace], [Share], [Edit] */}
         <div className="space-y-2.5 pt-2">
           <Button
-            id="details-share-listing-btn"
-            onClick={() => navigate(`/products/${product.id}/share`)}
+            id="details-publish-marketplace-btn"
+            onClick={() => navigate(`/marketplace?productId=${product.id}`)}
             variant="warm"
             size="xl"
             fullWidth
-            icon={<Share2 className="w-6 h-6" />}
+            icon={<Globe className="w-6 h-6" />}
           >
-            Share Listing (मार्केट शेयर करें)
+            Publish to Marketplaces (ONDC / GeM)
+          </Button>
+
+          <Button
+            id="details-share-listing-btn"
+            onClick={() => navigate(`/products/${product.id}/share`)}
+            variant="outline"
+            size="lg"
+            fullWidth
+            icon={<Share2 className="w-5 h-5" />}
+          >
+            Share Listing Card
           </Button>
 
           <Button
             id="details-edit-product-btn"
             onClick={() => navigate(`/products/${product.id}/edit`)}
-            variant="outline"
-            size="lg"
+            variant="ghost"
+            size="md"
             fullWidth
-            icon={<Edit3 className="w-5 h-5" />}
+            icon={<Edit3 className="w-4 h-4" />}
           >
             Edit Product
           </Button>

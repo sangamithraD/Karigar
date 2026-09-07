@@ -44,6 +44,8 @@ export async function fetchAllProducts(): Promise<Product[]> {
   }
 }
 
+export const getProducts = fetchAllProducts;
+
 export async function fetchProductById(id: string): Promise<Product | null> {
   if (isMockModeEnabled()) {
     const products = getLocalProducts();
